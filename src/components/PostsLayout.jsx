@@ -77,7 +77,7 @@ const PostsLayout = ({ title, content, children }) => {
             </button>
           </div>
           <nav
-            id="full-screen-example"
+            id="full-screen-example" style={{backgroundColor:'#45438c'}}
             className={
               showSideNav ? sideNavVisibleClasses : sideNavHiddenClasses
             }

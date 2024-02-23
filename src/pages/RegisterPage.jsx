@@ -47,15 +47,15 @@ const RegisterPage = () => {
 
   return (
   <div
-      className="container mx-auto bg-[#fae4db] bg-cover bg-center"
+      className="container mx-auto bg-cover bg-center"
       style={{
         backgroundImage: `url(${connectubgi})`,
-        border: '2px solid black',
+        border: '2px solid white',
         borderRadius: '2%',
       }}
     >
     
-    <div className="container mx-auto bg-[#fae4db]">
+    <div className="container mx-auto">
       {errors.general && (
         <div className="text-red-600 text-center mt-4 text-sm">
           {errors.general}
@@ -236,13 +236,13 @@ const RegisterPage = () => {
             )}
           </form>
 
-          <p className="mt-10 text-center text-sm text-gray-500">
-            Already a member?
+          <p className="mt-10 text-center text-sm text-dark-500">
+            Already a member ?
             <Link
               to={"/"}
               className="font-semibold leading-6 text-[#000000] hover:text-[#000000]"
             >
-              Login
+              &nbsp; Login
             </Link>
           </p>
         </div>

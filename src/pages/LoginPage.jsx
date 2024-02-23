@@ -152,67 +152,90 @@ const LoginPage = () => {
   
 
   return (
-    <Layout title='ConnectU | Login' content='Login page' >
-      <div className="flex flex-col md:flex-row justify-center p-2 items-center h-full mt-28" >
-       
-        <div className="w-full md:w-1/2 mt-14 md:mt-0 md:ml-8 p-8 bg-white rounded-lg shadow-md" style={{border:'2px solid black'}}>
-          <div className="text-center">
-            <h2 className="text-2xl font-bold leading-9 tracking-tight text-[#000000]">Sign in to your account</h2>
-          </div>
-
-
-          {errors && (
-            <div className="text-red-600 text-center public mt-4 text-sm">
-              {errors.detail}
-            </div>
-          )}
-          <div className="mt-10">
-            <form onSubmit={onSubmit} >
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-                <div className="mt-2">
-                  <input id="email" name="email" onChange={onChange} value={email} type="email" required className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#92638f] sm:text-sm sm:leading-6"/>
-                </div>          
-              </div>
-
-              <div className="mt-4">
-                <div className="flex items-center justify-between">
-                  <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
-                  <div className="text-sm">
-                    <Link to={"/forgot"} className="font-semibold text-[#000000] hover:text-[#000000]">Forgot password?</Link>
-                  </div>
-                </div>
-                <div className="mt-2" >
-                  <input id="password" name="password" onChange={onChange} value={password} type="password" required className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#92638f] sm:text-sm sm:leading-6"/>
-                </div>
-                </div>
-                <div className="mt-6" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                  <button type="submit" className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#010101] hover:bg-[#000000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#000000]" style={{width:'30%'}}>Sign in</button>
-                </div>
-            </form>
-            {/* 554158844207-2g5nm548ll0b1l29etmr9oqmad2ub6rs.apps.googleusercontent.com */}
-            {/* 199421150316-n4oman99ciskt2htsv295vass7rn1tl7.apps.googleusercontent.com */}
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop:'30px' }}>
-              <GoogleOAuthProvider clientId="554158844207-2g5nm548ll0b1l29etmr9oqmad2ub6rs.apps.googleusercontent.com">
-              <GoogleLogin
-              clientId="554158844207-2g5nm548ll0b1l29etmr9oqmad2ub6rs.apps.googleusercontent.com"
-              onSuccess={handleGoogleLoginSuccess}
-              onFailure={handleGoogleLoginFailure}
-              />
-              </GoogleOAuthProvider>
-              </div>
-            <p className="mt-4 text-center text-sm text-gray-500">
-              Not a member?
-              <Link to={'/register'} className="font-semibold leading-6 text-[#5444ff] hover:text-[#000000]">Register</Link>
-            </p>
-            <p className="mt-4 text-center text-sm text-gray-500">
-              Admin?
-              <Link to={'/admin-login'} className="font-semibold leading-6 text-[#5d48ff] hover:text-[#000000]">Admin Login</Link>
-            </p>
-          </div>
-        </div>
+    <Layout title='ConnectU | Login' content='Login page'>
+  <div className="flex flex-col md:flex-row justify-center p-2 items-center h-full mt-16">
+    <div className="w-full md:w-1/2 md:ml-8 p-8 bg-[#fafafa] rounded-lg shadow-md">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-[#333333]">Sign in to your account</h2>
       </div>
-    </Layout>
+
+      {errors && (
+        <div className="text-red-600 text-center mt-4 text-sm">
+          {errors.detail}
+        </div>
+      )}
+
+      <form className="mt-6" onSubmit={onSubmit}>
+        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-700">
+          Email address
+        </label>
+        <input
+          id="email"
+          name="email"
+          onChange={onChange}
+          value={email}
+          type="email"
+          required
+          className="block w-full rounded-md border-gray-300 shadow-sm p-2 focus:ring focus:ring-[#92638f] focus:ring-opacity-50 focus:border-[#92638f] sm:text-sm mt-2"
+        />
+
+        <div className="mt-4">
+          <div className="flex items-center justify-between">
+            <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-700">
+              Password
+            </label>
+            <Link to="/forgot" className="text-sm font-semibold text-[#000000] hover:text-[#000000]">
+              Forgot password?
+            </Link>
+          </div>
+          <input
+            id="password"
+            name="password"
+            onChange={onChange}
+            value={password}
+            type="password"
+            required
+            className="block w-full rounded-md border-gray-300 shadow-sm p-2 focus:ring focus:ring-[#92638f] focus:ring-opacity-50 focus:border-[#92638f] sm:text-sm mt-2"
+          />
+        </div>
+
+        <div className="mt-6 flex justify-center">
+          <button
+            type="submit"
+            className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#4caf50] hover:bg-[#388e3c] focus:outline-none focus:ring focus:ring-offset-2 focus:ring-[#388e3c]"
+          >
+            Sign in
+          </button>
+        </div>
+      </form>
+
+      <div className="mt-6 flex justify-center">
+        <GoogleOAuthProvider clientId="554158844207-2g5nm548ll0b1l29etmr9oqmad2ub6rs.apps.googleusercontent.com">
+          <GoogleLogin
+            clientId="554158844207-2g5nm548ll0b1l29etmr9oqmad2ub6rs.apps.googleusercontent.com"
+            onSuccess={handleGoogleLoginSuccess}
+            onFailure={handleGoogleLoginFailure}
+          />
+        </GoogleOAuthProvider>
+      </div>
+
+      <p className="mt-4 text-center text-sm text-gray-500">
+        Not a member?{' '}
+        <Link to={'/register'} className="font-semibold leading-6 text-[#5444ff] hover:text-[#000000]">
+          Register
+        </Link>
+      </p>
+      <p className="mt-4 text-center text-sm text-gray-500">
+        Admin?{' '}
+        <Link to={'/admin-login'} className="font-semibold leading-6 text-[#5d48ff] hover:text-[#000000]">
+          Admin Login
+        </Link>
+      </p>
+    </div>
+  </div>
+</Layout>
+
+
   )
 }
 

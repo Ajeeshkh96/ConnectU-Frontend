@@ -206,7 +206,7 @@ const  Navbar = () => {
     <nav
       className="fixed top-0 w-full bg-white z-50 max-w-full md:h-20 md:flex md:items-center md:justify-between p-6 lg:px-8"
       aria-label="Global"
-      style={{backgroundColor:'#000000'}}
+      style={{backgroundColor:'#12106b'}}
     >
       <div className="flex justify-between items-center" style={{color:'white'}}>
         <Link to="/" className="-m-1.5 p-1.5">
