@@ -4,7 +4,7 @@ const currentProtocol = window.location.protocol;
 
 // const BASE_URL = 'https://www.arunkrishna.online';
 
-const BASE_URL = 'http://54.153.209.192';
+const BASE_URL = 'http://0.0.0.0:9090';
 
 // const BASE_URL = 'http://localhost:8000';
 
