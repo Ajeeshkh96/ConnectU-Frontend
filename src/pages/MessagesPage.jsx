@@ -85,9 +85,9 @@ const MessagesPage = () => {
       const websocketProtocol = window.location.protocol === "https:" ? "wss://" : "ws://";
       // const wsUrl = `${websocketProtocol}${window.location.host}/ws/chat/${data.id}/?token=${accessToken}`;
 
-      // const wsUrl = `${websocketProtocol}arunkrishna.online/ws/chat/${data.id}/?token=${accessToken}`;
+      // const wsUrl = `${websocketProtocol}ajeesh.online/ws/chat/${data.id}/?token=${accessToken}`;
 
-      // const wsUrl = `wss://arunkrishna.online/ws/chat/${data.id}/?token=${accessToken}`;
+      // const wsUrl = `wss://ajeesh.online/ws/chat/${data.id}/?token=${accessToken}`;
   
 
       const wsUrl = `ws://localhost:8000/ws/chat/${data.id}/?token=${accessToken}`
