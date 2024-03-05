@@ -87,10 +87,10 @@ const MessagesPage = () => {
 
       // const wsUrl = `${websocketProtocol}ajeesh.online/ws/chat/${data.id}/?token=${accessToken}`;
 
-      // const wsUrl = `wss://ajeesh.online/ws/chat/${data.id}/?token=${accessToken}`;
+      const wsUrl = `wss://ajeesh.online/ws/chat/${data.id}/?token=${accessToken}`;
   
 
-      const wsUrl = `ws://localhost:8000/ws/chat/${data.id}/?token=${accessToken}`
+      // const wsUrl = `ws://localhost:8000/ws/chat/${data.id}/?token=${accessToken}`
       const newChatWs = new WebSocket(wsUrl);
       setBg(true);
 
