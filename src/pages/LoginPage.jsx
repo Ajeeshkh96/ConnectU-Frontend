@@ -10,7 +10,6 @@ import { BASE_URL } from '../config';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 
-import connectubgi from '../assets/connectubgi.jpg'
 
 const LoginPage = () => {
   const dispatch = useDispatch();
