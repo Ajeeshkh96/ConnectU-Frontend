@@ -213,7 +213,7 @@ const  Navbar = () => {
           <span className="sr-only">ConnectU</span>
           {/* <h1>ConnectU</h1> */}
           <img
-            className="h-9 w-auto rounded-full"
+            className="h-36 w-auto rounded-full"
             src={connectulogo}
             alt="ConnectU"
           />
